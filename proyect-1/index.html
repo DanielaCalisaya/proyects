@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Geolocalización</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
 </head>
 <body>
+
+    <h2 style="text-align: center;">App Geolocalización por IP</h2>
+
+    <main class="container">
+
+        <form id="form">
+            <label>
+                IP del usuario
+                <input required id="input" type="text" placeholder="Introduce una IP">
+                <small>Por ejemplo: 98.207.254.136</small>
+                <!-- Validación: El pattern es un atributo que soporta el input donde puedes pasar una regex.
+                Asi se podrá comprobar que el usuario pasa una IP -->
+            </label> 
+            <!-- Al envolver el input con el label hacemos que el label al hacer click ponga su focus en el input -->
+            <button type="submit" id="submit">
+                Buscar información
+            </button>
+            <!-- El ultimo button de un form se comporta como submit por defecto si no queremos eso le ponemos de tipo button-->
+        </form>
+
+        <!-- Wl resultado de la API es json, aquí se lo formateará -->
+        <div>
+            <pre id="results">
+
+            </pre>
+            <!-- La etiqueta pre es para texto preformateado como código -->
+        </div>
+
+    </main>
     
+    <script src="script.js"></script>
 </body>
 </html>

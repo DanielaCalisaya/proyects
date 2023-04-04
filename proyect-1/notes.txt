@@ -1,0 +1,8 @@
+-Página que tiene a disposición muchas APIS: RapidAPI
+ https://rapidapi.com
+
+-API utilizada: API de geolocalización IP
+
+-Loading -> Framework: https://picocss.com/ (Alternatively, you can use unpkg CDN to link pico.css)
+
+-Deploy: https://app.netlify.com/drop
