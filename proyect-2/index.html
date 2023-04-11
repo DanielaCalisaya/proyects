@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Formulario de contacto</h1>
+    <form action="https://formsubmit.co/hdaniela127c@gmail.com" method="POST">
+        <!-- En action ingreso el link de formsubmit pero pongo en la ruta mi email. Es necesario abrir con live server -->
+        <input 
+            type="text" 
+            name="nombre" 
+            placeholder="Escribe tu nombre" 
+            pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" 
+            title="Nombre sólo acepta letras y espacios en blanco" 
+            required
+        ><br>
+        <br>
+        <!-- diagonal s, es para los espacios, incluye las demás letras como ñ, al alfabeto en inglés no le haría falta -->
+        <input 
+            type="email" 
+            name="correo" 
+            placeholder="Escribe tu email" 
+            pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" 
+            title="Formato de correo inválido" 
+            required
+        ><br>
+        <br>
+        <!-- podría bastar que solo ingrese el arroba pero no seria válido por eso el pattern -->
+        <textarea 
+            name="comentarios" 
+            id="" 
+            cols="30" 
+            rows="10"
+            required>
+        </textarea>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Restablecer">
+        <!-- http://127.0.0.1:5500/proyect-2/index.html?nombre=dan&correo=hdaniela127c%40gmail.com&comentarios=++++++++fffff -->
+    </form>
+
+    <!-- Min 6.27.49 JonMircha html -->
+    <script src="script.js"></script>
+</body>
+</html>
